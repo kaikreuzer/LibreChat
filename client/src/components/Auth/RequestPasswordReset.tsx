@@ -49,7 +49,7 @@ function RequestPasswordReset() {
         setBodyText(
           <span>
             {localize('com_auth_click')}{' '}
-            <a className="text-green-500 hover:underline" href={resetLink}>
+            <a className="text-blue-500 hover:underline" href={resetLink}>
               {localize('com_auth_here')}
             </a>{' '}
             {localize('com_auth_to_reset_your_password')}
@@ -66,7 +66,7 @@ function RequestPasswordReset() {
     if (bodyText) {
       return (
         <div
-          className="relative mt-4 rounded border border-green-400 bg-green-100 px-4 py-3 text-green-700 dark:bg-green-900 dark:text-white"
+          className="relative mt-4 rounded border border-blue-400 bg-blue-100 px-4 py-3 text-blue-700 dark:bg-blue-900 dark:text-white"
           role="alert"
         >
           {bodyText}
@@ -103,12 +103,12 @@ function RequestPasswordReset() {
                   },
                 })}
                 aria-invalid={!!errors.email}
-                className="webkit-dark-styles peer block w-full appearance-none rounded-md border border-gray-300 bg-transparent px-3.5 pb-3.5 pt-4 text-sm text-gray-900 focus:border-green-500 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-green-500"
+                className="webkit-dark-styles peer block w-full appearance-none rounded-md border border-gray-300 bg-transparent px-3.5 pb-3.5 pt-4 text-sm text-gray-900 focus:border-blue-500 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
                 placeholder=" "
               ></input>
               <label
                 htmlFor="email"
-                className="absolute start-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform bg-white px-3 text-sm text-gray-500 duration-100 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-3 peer-focus:text-green-600 dark:bg-gray-900 dark:text-gray-400 dark:peer-focus:text-green-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
+                className="absolute start-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform bg-white px-3 text-sm text-gray-500 duration-100 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-3 peer-focus:text-blue-600 dark:bg-gray-900 dark:text-gray-400 dark:peer-focus:text-blue-500 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
               >
                 {localize('com_auth_email_address')}
               </label>
@@ -124,12 +124,12 @@ function RequestPasswordReset() {
             <button
               type="submit"
               disabled={!!errors.email}
-              className="w-full transform rounded-md bg-green-500 px-4 py-3 tracking-wide text-white transition-colors duration-200 hover:bg-green-550 focus:bg-green-550 focus:outline-none disabled:cursor-not-allowed disabled:hover:bg-green-500"
+              className="hover:bg-blue-550 focus:bg-blue-550 w-full transform rounded-md bg-blue-500 px-4 py-3 tracking-wide text-white transition-colors duration-200 focus:outline-none disabled:cursor-not-allowed disabled:hover:bg-blue-500"
             >
               {localize('com_auth_continue')}
             </button>
             <div className="mt-4 flex justify-center">
-              <a href="/login" className="text-sm text-green-500">
+              <a href="/login" className="text-sm text-blue-500">
                 {localize('com_auth_back_to_login')}
               </a>
             </div>
@@ -144,7 +144,7 @@ function RequestPasswordReset() {
 
   const privacyPolicyRender = privacyPolicy?.externalUrl && (
     <a
-      className="text-sm text-green-500"
+      className="text-sm text-blue-500"
       href={privacyPolicy.externalUrl}
       target={privacyPolicy.openNewTab ? '_blank' : undefined}
       rel="noreferrer"
@@ -155,7 +155,7 @@ function RequestPasswordReset() {
 
   const termsOfServiceRender = termsOfService?.externalUrl && (
     <a
-      className="text-sm text-green-500"
+      className="text-sm text-blue-500"
       href={termsOfService.externalUrl}
       target={termsOfService.openNewTab ? '_blank' : undefined}
       rel="noreferrer"
